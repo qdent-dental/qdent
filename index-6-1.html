@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qdent | پلتفرم تخصصی دندانپزشکی</title>
+  <meta name="description" content="Qdent؛ پلتفرم تخصصی تجهیزات، محصولات، آموزش و مقایسه هوشمند محصولات دندانپزشکی.">
+  <meta name="theme-color" content="#071a2b">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Tahoma,Arial,sans-serif;background:#f5f8fb;color:#102332;line-height:1.8}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1180px,92%);margin:auto}
+    header{background:#071a2b;color:#fff;position:sticky;top:0;z-index:100;box-shadow:0 8px 25px rgba(0,0,0,.12)}
+    .nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .logo{display:flex;align-items:center;gap:10px;font-size:27px;font-weight:900}
+    .logo-mark{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,#20d5c5,#48a9ff);display:grid;place-items:center;font-size:22px}
+    nav{display:flex;gap:22px;color:#d7e4ed;font-size:14px}
+    nav a:hover{color:#39ddcf}
+    .nav-button{background:#fff;color:#071a2b;padding:9px 15px;border-radius:12px;font-weight:bold;font-size:13px}
+    .hero{background:radial-gradient(circle at 80% 20%,rgba(48,211,198,.18),transparent 30%),radial-gradient(circle at 15% 80%,rgba(70,150,255,.16),transparent 30%),#071a2b;color:#fff;padding:75px 0 90px}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:45px}
+    .badge{display:inline-block;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.13);color:#55e5d7;padding:7px 14px;border-radius:30px;font-size:13px;margin-bottom:20px}
+    h1{font-size:clamp(38px,6vw,70px);line-height:1.15;margin-bottom:20px;letter-spacing:-2px}
+    h1 span{color:#39ddcf}
+    .hero-text{color:#c5d5df;font-size:18px;max-width:650px;margin-bottom:28px}
+    .hero-buttons{display:flex;gap:12px;flex-wrap:wrap}
+    .primary{background:#39ddcf;color:#06202a;padding:12px 22px;border-radius:13px;font-weight:900;display:inline-block}
+    .secondary{border:1px solid rgba(255,255,255,.2);color:#fff;padding:12px 22px;border-radius:13px;display:inline-block}
+    .hero-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:28px;padding:30px;backdrop-filter:blur(15px);box-shadow:0 25px 70px rgba(0,0,0,.2)}
+    .tooth{font-size:95px;text-align:center;margin-bottom:8px}
+    .hero-card h3{text-align:center;font-size:21px;margin-bottom:8px}
+    .hero-card p{text-align:center;color:#b8cbd7;font-size:14px}
+    .search-box{margin-top:-30px;position:relative;z-index:10}
+    .search-inner{background:#fff;padding:12px;border-radius:20px;box-shadow:0 15px 45px rgba(17,40,60,.12);display:flex;gap:10px}
+    .search-inner input{flex:1;border:0;outline:0;font-size:16px;padding:13px;direction:rtl}
+    .search-inner button{border:0;background:#071a2b;color:#fff;border-radius:13px;padding:0 24px;font-weight:bold;cursor:pointer}
+    section{padding:75px 0}
+    .section-title{text-align:center;margin-bottom:40px}
+    .section-title small{color:#18ad9f;font-weight:bold;display:block;margin-bottom:8px}
+    .section-title h2{font-size:34px;margin-bottom:8px}
+    .section-title p{color:#687986}
+    .categories{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .category{background:#fff;border-radius:20px;padding:24px;border:1px solid #e5edf2;transition:.25s}
+    .category:hover{transform:translateY(-5px);box-shadow:0 15px 35px rgba(20,60,80,.09);border-color:#b8e9e4}
+    .category-icon{width:50px;height:50px;border-radius:15px;background:#e8faf8;display:grid;place-items:center;font-size:25px;margin-bottom:15px}
+    .category h3{font-size:17px;margin-bottom:6px}
+    .category p{color:#71818d;font-size:13px}
+    .features{background:#edf5f8}
+    .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .feature{background:#fff;padding:28px;border-radius:22px;border:1px solid #e0eaef}
+    .feature-number{color:#1bbcae;font-size:14px;font-weight:bold;margin-bottom:12px}
+    .feature h3{font-size:20px;margin-bottom:8px}
+    .feature p{color:#697b87;font-size:14px}
+    .cta{background:#071a2b;color:#fff;border-radius:30px;padding:50px;text-align:center}
+    .cta h2{font-size:34px;margin-bottom:10px}
+    .cta p{color:#bfd0da;margin-bottom:22px}
+    footer{background:#04121e;color:#a9bbc6;padding:42px 0 22px}
+    .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:30px;margin-bottom:30px}
+    .footer-title{color:#fff;font-weight:bold;margin-bottom:10px}
+    .footer-text,.footer-links{font-size:13px}
+    .footer-links{display:flex;flex-direction:column;gap:6px}
+    .copyright{border-top:1px solid rgba(255,255,255,.08);padding-top:18px;text-align:center;font-size:12px}
+    @media(max-width:850px){
+      nav{display:none}.hero{padding:58px 0 72px}.hero-grid{grid-template-columns:1fr;gap:30px}
+      .hero-card{max-width:430px;margin:auto;width:100%}.categories{grid-template-columns:repeat(2,1fr)}
+      .feature-grid,.footer-grid{grid-template-columns:1fr}
+    }
+    @media(max-width:520px){
+      .nav-button{display:none}h1{font-size:43px}.hero-text{font-size:16px}
+      .categories{grid-template-columns:1fr}.search-inner{padding:8px}
+      .search-inner button{padding:0 16px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="logo" href="#"><span class="logo-mark">🦷</span>Qdent</a>
+      <nav>
+        <a href="#categories">دسته‌بندی‌ها</a>
+        <a href="#features">امکانات</a>
+        <a href="#about">درباره Qdent</a>
+      </nav>
+      <a class="nav-button" href="#contact">شروع کنید</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="badge">پلتفرم نوین دندانپزشکی</span>
+          <h1>دنیای دندانپزشکی، <span>هوشمندتر.</span></h1>
+          <p class="hero-text">Qdent قرار است جایی باشد برای شناخت بهتر تجهیزات و محصولات دندانپزشکی، آموزش، بررسی تجربه‌ها و مقایسه هوشمندانه؛ ساده، سریع و حرفه‌ای.</p>
+          <div class="hero-buttons">
+            <a class="primary" href="#categories">کشف Qdent</a>
+            <a class="secondary" href="#features">چرا Qdent؟</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="tooth">🦷</div>
+          <h3>یک مرجع برای دندانپزشکی مدرن</h3>
+          <p>از انتخاب محصول تا یادگیری و مقایسه، همه‌چیز در یک تجربه ساده.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="search-box">
+      <div class="container">
+        <div class="search-inner">
+          <input id="searchInput" type="search" placeholder="محصول، برند یا موضوع موردنظر را جستجو کنید...">
+          <button onclick="searchQdent()">جستجو</button>
+        </div>
+      </div>
+    </div>
+
+    <section id="categories">
+      <div class="container">
+        <div class="section-title">
+          <small>Qdent Categories</small>
+          <h2>دنیای دندانپزشکی را دسته‌بندی کرده‌ایم</h2>
+          <p>شروع کار با موضوعی که همین امروز به آن نیاز دارید.</p>
+        </div>
+        <div class="categories">
+          <div class="category"><div class="category-icon">⚙️</div><h3>تجهیزات</h3><p>یونیت، اتوکلاو، کمپرسور و تجهیزات کلینیکی.</p></div>
+          <div class="category"><div class="category-icon">🦷</div><h3>اندو</h3><p>ابزارها و تجهیزات تخصصی درمان ریشه.</p></div>
+          <div class="category"><div class="category-icon">🩺</div><h3>جراحی</h3><p>ابزار و تجهیزات موردنیاز بخش جراحی.</p></div>
+          <div class="category"><div class="category-icon">♨️</div><h3>استریلیزاسیون</h3><p>اتوکلاو، پک، تست و ملزومات استریل.</p></div>
+          <div class="category"><div class="category-icon">🔧</div><h3>ابزار</h3><p>ابزارهای دستی و تخصصی دندانپزشکی.</p></div>
+          <div class="category"><div class="category-icon">📦</div><h3>مصرفی</h3><p>مواد و اقلام مصرفی روزمره مطب و کلینیک.</p></div>
+          <div class="category"><div class="category-icon">🏷️</div><h3>برندها</h3><p>شناخت برندها و بررسی محصولات آن‌ها.</p></div>
+          <div class="category"><div class="category-icon">📊</div><h3>مقایسه</h3><p>مقایسه ساده و شفاف برای انتخاب بهتر.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <div class="container">
+        <div class="section-title">
+          <small>Why Qdent</small>
+          <h2>قرار است Qdent چه چیزی را بهتر کند؟</h2>
+          <p>اطلاعات مفید را از میان پیچیدگی‌های بازار دندانپزشکی ساده می‌کنیم.</p>
+        </div>
+        <div class="feature-grid">
+          <div class="feature"><div class="feature-number">01</div><h3>مقایسه هوشمند</h3><p>مشخصات، کاربرد و تفاوت محصولات را کنار هم ببینید و آگاهانه‌تر تصمیم بگیرید.</p></div>
+          <div class="feature"><div class="feature-number">02</div><h3>مجله آموزشی</h3><p>محتوای کاربردی درباره تجهیزات، مواد، تکنولوژی و نکات مهم دندانپزشکی.</p></div>
+          <div class="feature"><div class="feature-number">03</div><h3>اطلاعات شفاف</h3><p>هدف Qdent این است که انتخاب محصول برای دندانپزشک و کلینیک ساده‌تر و مطمئن‌تر شود.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="cta" id="contact">
+          <h2>Qdent تازه شروع شده است.</h2>
+          <p>این صفحه، اولین قدم برای ساخت یک پلتفرم حرفه‌ای دندانپزشکی است.</p>
+          <a class="primary" href="#categories">شروع جستجو</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div><div class="footer-title">Qdent</div><div class="footer-text">پلتفرمی مدرن برای محصولات، آموزش، بررسی و مقایسه در دنیای دندانپزشکی.</div></div>
+        <div><div class="footer-title">دسترسی سریع</div><div class="footer-links"><a href="#categories">دسته‌بندی‌ها</a><a href="#features">امکانات</a><a href="#about">درباره Qdent</a></div></div>
+        <div><div class="footer-title">آینده Qdent</div><div class="footer-text">فروشگاه، مقایسه قیمت، نظرات کاربران و ابزارهای هوشمند در مراحل بعدی.</div></div>
+      </div>
+      <div class="copyright">© 2026 Qdent — همه حقوق محفوظ است.</div>
+    </div>
+  </footer>
+
+  <script>
+    function searchQdent(){
+      const value=document.getElementById('searchInput').value.trim();
+      if(value) alert('جستجوی «'+value+'» در نسخه بعدی Qdent فعال می‌شود.');
+      else document.getElementById('searchInput').focus();
+    }
+  </script>
+</body>
+</html>
